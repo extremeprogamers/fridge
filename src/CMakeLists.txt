@@ -1,4 +1,4 @@
-add_library(fridge "")
+add_library(fridge "" database.cpp database.h)
 
 target_sources(
         fridge

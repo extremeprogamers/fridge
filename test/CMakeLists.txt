@@ -2,7 +2,7 @@ add_executable(
         unit_tests
         strcomp.cpp
         test_subtract.cpp
-)
+        database_test.cpp)
 
 target_link_libraries(
         unit_tests
