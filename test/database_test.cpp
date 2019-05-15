@@ -23,8 +23,31 @@ TEST(database, getAll) {
     database.add(message1);
     list<string> result = database.getAll();
     ASSERT_EQ(result.size(), 1);
+    database.add(message2);
+    result = database.getAll();
+    ASSERT_EQ(result.size(), 2);
 }
 
+TEST(database, remove) {
+    Database database;
+    database.add(message1);
+    list<string> result = database.getAll();
+    ASSERT_EQ(result.size(), 1);
+    database.remove(message1);
+    result = database.getAll();
+    ASSERT_EQ(result.size(), 0);
+}
+
+TEST(database, clear) {
+    Database database;
+    database.add(message1);
+    database.add(message2);
+    list<string> result = database.getAll();
+    ASSERT_EQ(result.size(), 2);
+    database.clear();
+    result = database.getAll();
+    ASSERT_EQ(result.size(), 0);
+}
 
 
 

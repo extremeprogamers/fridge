@@ -18,7 +18,9 @@ private:
 public:
     Database();
     bool add(string message);
+    bool remove(string message);
     list<string> getAll();
+    bool clear();
 };
 
 #endif //FRIDGE1_DATABASE_H

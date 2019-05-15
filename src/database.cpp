@@ -13,6 +13,16 @@ bool Database :: add(string message) {
     return true;
 }
 
+bool Database ::remove(string message) {
+    storage.remove(message);
+    return true;
+}
+
 list<string> Database :: getAll() {
     return storage;
+}
+
+bool Database ::clear() {
+    storage.clear();
+    return true;
 }
